@@ -28,7 +28,7 @@ const Recruiter = mongoose.model("Recruiter", {
         type: Number,
         required: true,
         validate(value) {
-            if (!validator.isMobilePhone(value))
+            if (!validator.isMobilePhone(value.toString()))
                 throw new Error("invalid phone number");
         },
     },
