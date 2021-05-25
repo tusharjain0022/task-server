@@ -29,6 +29,10 @@ const Job = mongoose.model("Jobs", {
                 throw new Error("Openings must be a positive number");
         },
     },
+    postedBy: {
+        type: mongoose.Types.ObjectId,
+        required: true,
+    },
     status: {
         type: Boolean,
         default: true,

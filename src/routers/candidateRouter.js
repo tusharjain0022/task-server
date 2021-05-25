@@ -7,4 +7,6 @@ router
     .post(candidateController.postCandidate)
     .get(candidateController.getOneCandidate);
 
+router.route("/:id").get(candidateController.getManyCandidatesByJobId);
+
 module.exports = router;
